@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/lws-logo-light.svg";
 import Button from "../components/ui/Button";
 import Input from "../components/ui/Input";
@@ -36,11 +37,13 @@ const Login = () => {
 
             <div className="flex items-center justify-end">
               <div className="text-sm">
-                <a
+                You have no account !{" "}
+                <Link
+                  to="/register"
                   href="#"
                   className="font-medium text-violet-600 hover:text-violet-500">
-                  Forgot your password?
-                </a>
+                  Please Register ?
+                </Link>
               </div>
             </div>
             <Button> Sign in</Button>

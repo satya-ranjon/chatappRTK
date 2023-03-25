@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/lws-logo-light.svg";
 import Button from "../components/ui/Button";
 import CheckInput from "../components/ui/CheckInput";
@@ -40,6 +41,16 @@ const Register = () => (
           />
 
           <Button>Sign up</Button>
+          <div className="flex items-center justify-end">
+            <div className="text-sm">
+              You have already account !{" "}
+              <Link
+                to="/"
+                className="font-medium text-violet-600 hover:text-violet-500">
+                Please Login ?
+              </Link>
+            </div>
+          </div>
         </form>
       </div>
     </div>
