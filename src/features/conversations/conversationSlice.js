@@ -8,4 +8,4 @@ const conversationSlice = createSlice({
   reducers: {},
 });
 
-export default conversationSlice;
+export default conversationSlice.reducer;

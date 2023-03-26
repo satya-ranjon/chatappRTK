@@ -7,3 +7,5 @@ const messagesSlice = createSlice({
   initialState,
   reducers: {},
 });
+
+export default messagesSlice.reducer;

@@ -1,10 +1,56 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/lws-logo-light.svg";
 import Button from "../components/ui/Button";
+import Error from "../components/ui/Error";
 import Input from "../components/ui/Input";
+import { useLoginMutation } from "../features/auth/authApi";
 
-const Login = () => {
+const initialState = {
+  email: "",
+  password: "",
+};
+const SignIn = () => {
+  const [formData, setFormData] = useState(initialState);
+  const [error, setError] = useState("");
+  const [login, { data, isLoading, isError, error: responseError }] =
+    useLoginMutation();
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    const { name, value, type, checked } = event.target;
+    const newValue = type === "checkbox" ? checked : value;
+    setFormData({ ...formData, [name]: newValue });
+  };
+
+  useEffect(() => {
+    if (responseError?.data) {
+      setError(responseError.data);
+    }
+    if (data?.accessToken && data?.user) {
+      navigate("/inbox");
+      setFormData(initialState);
+    }
+  }, [isError, data]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (!formData.email) {
+      setError(" Email is required ");
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      setError(" Email is invalid ");
+    } else if (!formData.password) {
+      setError(" Password is required ");
+    } else {
+      login({
+        email: formData.email,
+        password: formData.password,
+      });
+    }
+  };
+
   return (
     <div className="grid place-items-center h-screen bg-[#F9FAFB">
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -19,19 +65,24 @@ const Login = () => {
               Sign in to your account
             </h2>
           </div>
-          <form className="mt-8 space-y-6">
+          {error && <Error message={error} />}
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="rounded-md shadow-sm -space-y-px">
               <Input
                 name="email"
                 type="email"
                 className="rounded-t-md"
                 placeholder="Email address"
+                value={formData.email}
+                onChange={handleInputChange}
               />
               <Input
                 name="password"
                 type="password"
                 className="rounded-b-md"
                 placeholder="Password"
+                value={formData.password}
+                onChange={handleInputChange}
               />
             </div>
 
@@ -46,7 +97,7 @@ const Login = () => {
                 </Link>
               </div>
             </div>
-            <Button> Sign in</Button>
+            <Button disabled={isLoading}> Sign in</Button>
           </form>
         </div>
       </div>
@@ -54,4 +105,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;

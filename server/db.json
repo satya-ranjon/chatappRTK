@@ -32,26 +32,15 @@
     },
     {
       "email": "khokon@gmail.com",
-      "password": "$2a$10$D6.V7kMzevUBKtZE693aDu3qKdW162aljzDobJDu5rzUBiBV3Vxmm",
+      "password": "$2a$10$v5aSH1fgNwZ0verskWTxXOJmnk1Gd/.rDB1eEuCypkvY8CPSeNt7O",
       "name": "khokon",
       "id": 6
     },
     {
-      "email": "khokon11@gmail.com",
-      "password": "$2a$10$zy9kch2zoOKPNvyCmMXcY..RMUyxJzWRTsD4ZY76nZqD8RFRBkqXK",
-      "name": "khokon11",
+      "email": "khokondev@gmail.com",
+      "password": "$2a$10$weRZXuNkMr6o/8iRl3ULUuQBkUE0vj6.sh4B9liIcP/6Km6hmEmsS",
+      "name": "khokon",
       "id": 7
-    },
-    {
-      "email": "khokon113@gmail.com",
-      "password": "$2a$10$0xNuXPwwA.IfqcfQ06A5UujPTN35BZsn5DQk03PXl1XjQbsOTODia",
-      "id": 8
-    },
-    {
-      "email": "khokon13133@gmail.com",
-      "password": "$2a$10$eervcYhNTRwqfOz1u6qHFOuok1D/1uavVLMhPFL9TsEXiEViD1mdK",
-      "name": "khokon1",
-      "id": 9
     }
   ],
   "conversations": [
