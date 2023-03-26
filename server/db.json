@@ -41,6 +41,12 @@
       "password": "$2a$10$weRZXuNkMr6o/8iRl3ULUuQBkUE0vj6.sh4B9liIcP/6Km6hmEmsS",
       "name": "khokon",
       "id": 7
+    },
+    {
+      "email": "khokon13133@gmail.com",
+      "password": "$2a$10$GEvTo/4gCbG36/aBJ8NwNO7DYQ7bJpWHESdjk.Ajq6GglPuhdHj4G",
+      "name": "khokon1",
+      "id": 8
     }
   ],
   "conversations": [
