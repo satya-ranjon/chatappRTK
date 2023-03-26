@@ -78,7 +78,7 @@
           "id": 1
         },
         {
-          "email": "akash@learnwithsumit.com",
+          "email": "saad@learnwithsumit.com",
           "name": "Saad Hasan",
           "id": 3
         }
@@ -110,6 +110,22 @@
       "sender": {
         "email": "akash@learnwithsumit.com",
         "name": "Akash Ahmed",
+        "id": 2
+      },
+      "receiver": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit Saha",
+        "id": 1
+      },
+      "message": "How are you?",
+      "timestamp": 1661976143678
+    },
+    {
+      "id": 3,
+      "conversationId": 2,
+      "sender": {
+        "email": "saad@learnwithsumit.com",
+        "name": "Saad Hasan",
         "id": 2
       },
       "receiver": {

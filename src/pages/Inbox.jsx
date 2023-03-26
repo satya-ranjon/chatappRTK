@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet, useParams } from "react-router-dom";
-import ConversationList from "../components/inbox/sidebar/ConversationList";
+import SideBar from "../components/inbox/sidebar/SideBar";
 import Navbar from "../components/Navbar/Navbar";
 
 const Inbox = () => {
@@ -22,7 +22,7 @@ const Inbox = () => {
       <Navbar />
       <div className="max-w-7xl mx-auto -mt-1">
         <div className="min-w-full border rounded flex lg:grid lg:grid-cols-3">
-          <ConversationList />
+          <SideBar />
           <div className="w-full lg:col-span-2 lg:block">
             <div className="w-full grid conversation-row-grid">{content}</div>
           </div>

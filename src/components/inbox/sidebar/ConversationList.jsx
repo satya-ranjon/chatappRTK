@@ -1,26 +1,40 @@
-import Model from "./Model";
-import SendMessageIcon from "../../ui/SendMessageIcon";
 import ConversationItem from "./ConversationItem";
-import { useState } from "react";
+import { useGetConversationsQuery } from "../../../features/conversations/conversationApi";
+import { useSelector } from "react-redux";
+import Error from "../../ui/Error";
 
 const ConversationList = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { user } = useSelector((state) => state.auth);
 
-  const handleModelIsOpen = () => {
-    setIsOpen(!isOpen);
-  };
+  const {
+    data: conversations,
+    isLoading,
+    isError,
+    isSuccess,
+  } = useGetConversationsQuery({ email: user?.email });
 
-  return (
-    <div className="w-[100px] border-r border-t-0 border-gray-300 lg:col-span-1 md:w-full">
-      <div className="h-[65px] text-center text-grey-500 p-4 border-b border-gray-300 flex md:justify-end justify-center">
-        <SendMessageIcon onClick={handleModelIsOpen} />
-      </div>
-      <ul className="overflow-auto">
-        <ConversationItem />
-      </ul>
-      <Model open={isOpen} control={handleModelIsOpen} />
-    </div>
-  );
+  // Decided what to render
+  let content;
+  if (isLoading) {
+    content = <div>Loading...</div>;
+  }
+  if (isError) {
+    content = <Error message="Some error occurred" />;
+  }
+  if (isSuccess && conversations?.length === 0) {
+    content = <li> You have no conversations </li>;
+  }
+  if (isSuccess && conversations?.length > 0) {
+    content = conversations.map((conversation) => (
+      <ConversationItem
+        key={conversation.id}
+        conversation={conversation}
+        email={user?.email}
+      />
+    ));
+  }
+
+  return <ul className="overflow-auto">{content}</ul>;
 };
 
 export default ConversationList;
