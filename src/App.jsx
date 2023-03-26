@@ -1,9 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MessagesBox from "./components/inbox/MessagesBox";
 import useAuthCheck from "./hooks/useAuthCheck";
-import Inbox from "./pages/Inbox";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Routers from "./routes";
 
 const App = () => {
   const authChecked = useAuthCheck();
@@ -12,13 +9,7 @@ const App = () => {
     <div>Checking authentication .... </div>
   ) : (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/inbox" element={<Inbox />}>
-          <Route path="/inbox/:id" element={<MessagesBox />} />
-        </Route>
-      </Routes>
+      <Routers />
     </BrowserRouter>
   );
 };
