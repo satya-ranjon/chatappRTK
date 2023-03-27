@@ -4,14 +4,15 @@ import { useSelector } from "react-redux";
 import Error from "../../ui/Error";
 
 const ConversationList = () => {
-  const { user } = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.auth) || {};
+  const { email } = user || {};
 
   const {
     data: conversations,
     isLoading,
     isError,
     isSuccess,
-  } = useGetConversationsQuery({ email: user?.email });
+  } = useGetConversationsQuery(email);
 
   // Decided what to render
   let content;
@@ -29,7 +30,7 @@ const ConversationList = () => {
       <ConversationItem
         key={conversation.id}
         conversation={conversation}
-        email={user?.email}
+        email={email}
       />
     ));
   }

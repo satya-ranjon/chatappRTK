@@ -1,140 +1,309 @@
 {
   "users": [
     {
-      "email": "sumit@learnwithsumit.com",
-      "password": "$2a$10$Fsd8wqTFuS0ZO43wmX9zye2zRMwhJyNMJD/wLNn3NE8t1EAY4vRKm",
-      "name": "Sumit",
+      "email": "trishna@gmail.com",
+      "password": "$2a$10$uSavAHaE17ZPTLGtnXG1.epS.jMWVkKTqexjYnojGZodU5ZA884uS",
+      "name": "Trishna",
       "id": 1
     },
     {
-      "email": "saad@learnwithsumit.com",
-      "password": "$2a$10$QwAaboLrPQznK/dFW0D1iu6aRG4KdaVsNYqyJFqJQF0CJZ5bzn/aS",
-      "name": "Saad",
+      "email": "satya@gmail.com",
+      "password": "$2a$10$78eAAPZgrCW8CUOfr1p/Eex152mL4wJHUlLVYzsi8JVIiRQeBTqSm",
+      "name": "Satya Ranjon",
       "id": 2
     },
     {
-      "email": "akash@learnwithsumit.com",
-      "password": "$2a$10$lpx3hz9hiN9zp4n/30LHset1/tt/30.Cq6w6f/kjTL.IUM7PgGniG",
-      "name": "Akash",
+      "email": "khokon@gmail.com",
+      "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
+      "name": "Khakon Sharma",
       "id": 3
     },
     {
-      "email": "test@gmail.com",
-      "password": "$2a$10$Ad8853WCm4fyES7yBV.Wr.cGnx05bEwIi163VoopfPO4RicVQfuj6",
-      "name": "Test",
+      "email": "badhon@gmail.com",
+      "password": "$2a$10$rnUKBmWVIK3EYtVRdXVzG.XVJnuX5FgimNSbJitcia0RZDniLJJoq",
+      "name": "Badhon Dev",
       "id": 4
-    },
-    {
-      "email": "test2@gmail.com",
-      "password": "$2a$10$Zz.7BmfFYT6iKwl/Z11bAOp454rpMEyumveCXZ4i8XNU8agJZJSF.",
-      "name": "Test 2",
-      "id": 5
-    },
-    {
-      "email": "khokon@gmail.com",
-      "password": "$2a$10$v5aSH1fgNwZ0verskWTxXOJmnk1Gd/.rDB1eEuCypkvY8CPSeNt7O",
-      "name": "khokon",
-      "id": 6
-    },
-    {
-      "email": "khokondev@gmail.com",
-      "password": "$2a$10$weRZXuNkMr6o/8iRl3ULUuQBkUE0vj6.sh4B9liIcP/6Km6hmEmsS",
-      "name": "khokon",
-      "id": 7
-    },
-    {
-      "email": "khokon13133@gmail.com",
-      "password": "$2a$10$GEvTo/4gCbG36/aBJ8NwNO7DYQ7bJpWHESdjk.Ajq6GglPuhdHj4G",
-      "name": "khokon1",
-      "id": 8
     }
   ],
   "conversations": [
     {
-      "id": 1,
-      "participants": "sumit@learnwithsumit.com-akash@learnwithsumit.com",
+      "participants": "trishna@gmail.com-khokon@gmail.com",
       "users": [
         {
-          "email": "sumit@learnwithsumit.com",
-          "name": "Sumit Saha",
+          "email": "trishna@gmail.com",
+          "name": "Trishna",
           "id": 1
         },
         {
-          "email": "akash@learnwithsumit.com",
-          "name": "Akash Ahmed",
-          "id": 2
-        }
-      ],
-      "message": "How are you?",
-      "timestamp": 1661976143678
-    },
-    {
-      "id": 2,
-      "participants": "sumit@learnwithsumit.com-saad@learnwithsumit.com",
-      "users": [
-        {
-          "email": "sumit@learnwithsumit.com",
-          "name": "Sumit Saha",
-          "id": 1
-        },
-        {
-          "email": "saad@learnwithsumit.com",
-          "name": "Saad Hasan",
+          "email": "khokon@gmail.com",
+          "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
+          "name": "Khakon Sharma",
           "id": 3
         }
       ],
-      "message": "How are you?",
-      "timestamp": 1661976143678
+      "message": "Ki ba .jarua",
+      "timestamp": 1679874142936,
+      "id": 1
+    },
+    {
+      "participants": "badhon@gmail.com-trishna@gmail.com",
+      "users": [
+        {
+          "email": "badhon@gmail.com",
+          "name": "Badhon Dev",
+          "id": 4
+        },
+        {
+          "email": "trishna@gmail.com",
+          "password": "$2a$10$uSavAHaE17ZPTLGtnXG1.epS.jMWVkKTqexjYnojGZodU5ZA884uS",
+          "name": "Trishna",
+          "id": 1
+        }
+      ],
+      "message": "Ki ra mangar bati ki khobor",
+      "timestamp": 1679873682300,
+      "id": 2
+    },
+    {
+      "participants": "satya@gmail.com-trishna@gmail.com",
+      "users": [
+        {
+          "email": "satya@gmail.com",
+          "name": "Satya Ranjon",
+          "id": 2
+        },
+        {
+          "email": "trishna@gmail.com",
+          "name": "Trishna",
+          "id": 1
+        }
+      ],
+      "message": "hi",
+      "timestamp": 1679902076564,
+      "id": 3
+    },
+    {
+      "participants": "satya@gmail.com-khokon@gmail.com",
+      "users": [
+        {
+          "email": "satya@gmail.com",
+          "name": "Satya Ranjon",
+          "id": 2
+        },
+        {
+          "email": "khokon@gmail.com",
+          "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
+          "name": "Khakon Sharma",
+          "id": 3
+        }
+      ],
+      "message": "Hello bro",
+      "timestamp": 1679902105724,
+      "id": 4
+    },
+    {
+      "participants": "satya@gmail.com-badhon@gmail.com",
+      "users": [
+        {
+          "email": "satya@gmail.com",
+          "name": "Satya Ranjon",
+          "id": 2
+        },
+        {
+          "email": "badhon@gmail.com",
+          "password": "$2a$10$rnUKBmWVIK3EYtVRdXVzG.XVJnuX5FgimNSbJitcia0RZDniLJJoq",
+          "name": "Badhon Dev",
+          "id": 4
+        }
+      ],
+      "message": "Kathy viya",
+      "timestamp": 1679902139444,
+      "id": 5
     }
   ],
   "messages": [
     {
-      "id": 1,
       "conversationId": 1,
       "sender": {
-        "email": "sumit@learnwithsumit.com",
-        "name": "Sumit Saha",
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
         "id": 1
       },
       "receiver": {
-        "email": "akash@learnwithsumit.com",
-        "name": "Akash Ahmed",
-        "id": 2
+        "email": "khokon@gmail.com",
+        "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
+        "name": "Khakon Sharma",
+        "id": 3
       },
-      "message": "Hello",
-      "timestamp": 1661976143557
+      "message": "Hi",
+      "timestamp": 1679873648954,
+      "id": 1
     },
     {
-      "id": 2,
-      "conversationId": 1,
-      "sender": {
-        "email": "akash@learnwithsumit.com",
-        "name": "Akash Ahmed",
-        "id": 2
-      },
-      "receiver": {
-        "email": "sumit@learnwithsumit.com",
-        "name": "Sumit Saha",
-        "id": 1
-      },
-      "message": "How are you?",
-      "timestamp": 1661976143678
-    },
-    {
-      "id": 3,
       "conversationId": 2,
       "sender": {
-        "email": "saad@learnwithsumit.com",
-        "name": "Saad Hasan",
+        "email": "badhon@gmail.com",
+        "name": "Badhon Dev",
+        "id": 4
+      },
+      "receiver": {
+        "email": "trishna@gmail.com",
+        "password": "$2a$10$uSavAHaE17ZPTLGtnXG1.epS.jMWVkKTqexjYnojGZodU5ZA884uS",
+        "name": "Trishna",
+        "id": 1
+      },
+      "message": "Ki ra mangar bati ki khobor",
+      "timestamp": 1679873682300,
+      "id": 2
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "satya@gmail.com",
+        "name": "Satya Ranjon",
         "id": 2
       },
       "receiver": {
-        "email": "sumit@learnwithsumit.com",
-        "name": "Sumit Saha",
+        "email": "trishna@gmail.com",
+        "password": "$2a$10$uSavAHaE17ZPTLGtnXG1.epS.jMWVkKTqexjYnojGZodU5ZA884uS",
+        "name": "Trishna",
         "id": 1
       },
-      "message": "How are you?",
-      "timestamp": 1661976143678
+      "message": "Hi Baby?\n",
+      "timestamp": 1679873888081,
+      "id": 3
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "receiver": {
+        "email": "khokon@gmail.com",
+        "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
+        "name": "Khakon Sharma",
+        "id": 3
+      },
+      "message": "Ki ba .jarua",
+      "timestamp": 1679874142936,
+      "id": 4
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "receiver": {
+        "email": "satya@gmail.com",
+        "password": "$2a$10$78eAAPZgrCW8CUOfr1p/Eex152mL4wJHUlLVYzsi8JVIiRQeBTqSm",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "message": "I ba sala",
+      "timestamp": 1679874176559,
+      "id": 5
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "satya@gmail.com",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "receiver": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "message": "hello",
+      "timestamp": 1679875343021,
+      "id": 6
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "satya@gmail.com",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "receiver": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "message": "tomar ki khobor",
+      "timestamp": 1679875352759,
+      "id": 7
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "satya@gmail.com",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "receiver": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "message": "tumi ki amr kotha mona koro na",
+      "timestamp": 1679875370836,
+      "id": 8
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "satya@gmail.com",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "receiver": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "message": "hi",
+      "timestamp": 1679902076564,
+      "id": 9
+    },
+    {
+      "conversationId": 4,
+      "sender": {
+        "email": "satya@gmail.com",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "receiver": {
+        "email": "khokon@gmail.com",
+        "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
+        "name": "Khakon Sharma",
+        "id": 3
+      },
+      "message": "Hello bro",
+      "timestamp": 1679902105724,
+      "id": 10
+    },
+    {
+      "conversationId": 5,
+      "sender": {
+        "email": "satya@gmail.com",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "receiver": {
+        "email": "badhon@gmail.com",
+        "password": "$2a$10$rnUKBmWVIK3EYtVRdXVzG.XVJnuX5FgimNSbJitcia0RZDniLJJoq",
+        "name": "Badhon Dev",
+        "id": 4
+      },
+      "message": "Kathy viya",
+      "timestamp": 1679902139444,
+      "id": 11
     }
   ]
 }

@@ -4,16 +4,19 @@ import Options from "./Options";
 import { useParams } from "react-router-dom";
 import { useGetMessagesQuery } from "../../features/messages/messagesApi";
 import Error from "../ui/Error";
+import { useSelector } from "react-redux";
 
 const MessagesBox = () => {
   const { id } = useParams();
+  const { user } = useSelector((state) => state.auth) || {};
+  const { email } = user || {};
 
   const {
     data: messages,
     isLoading,
     isError,
     isSuccess,
-  } = useGetMessagesQuery(id);
+  } = useGetMessagesQuery({ id, email });
 
   // decided what to render
   let content;
@@ -31,7 +34,7 @@ const MessagesBox = () => {
       <>
         <MessagesBoxHeader messages={messages[0]} />
         <Messages messages={messages} />
-        <Options />
+        <Options info={messages[0]} />
       </>
     );
   }
