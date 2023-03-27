@@ -9,6 +9,9 @@ lerna-debug.log*
 
 node_modules
 dist
+server
+html-template
+.vscode
 dist-ssr
 *.local
 
