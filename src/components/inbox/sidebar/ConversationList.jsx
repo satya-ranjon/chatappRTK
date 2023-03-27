@@ -7,12 +7,16 @@ const ConversationList = () => {
   const { user } = useSelector((state) => state.auth) || {};
   const { email } = user || {};
 
-  const {
-    data: conversations,
-    isLoading,
-    isError,
-    isSuccess,
-  } = useGetConversationsQuery(email);
+  const { data, isLoading, isError, isSuccess } =
+    useGetConversationsQuery(email);
+
+  let conversations = data || [];
+
+  if (isSuccess && conversations?.length > 0) {
+    conversations = conversations
+      .slice()
+      .sort((a, b) => b.timestamp - a.timestamp);
+  }
 
   // Decided what to render
   let content;

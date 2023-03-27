@@ -27,44 +27,6 @@
   ],
   "conversations": [
     {
-      "participants": "trishna@gmail.com-khokon@gmail.com",
-      "users": [
-        {
-          "email": "trishna@gmail.com",
-          "name": "Trishna",
-          "id": 1
-        },
-        {
-          "email": "khokon@gmail.com",
-          "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
-          "name": "Khakon Sharma",
-          "id": 3
-        }
-      ],
-      "message": "Ki ba .jarua",
-      "timestamp": 1679874142936,
-      "id": 1
-    },
-    {
-      "participants": "badhon@gmail.com-trishna@gmail.com",
-      "users": [
-        {
-          "email": "badhon@gmail.com",
-          "name": "Badhon Dev",
-          "id": 4
-        },
-        {
-          "email": "trishna@gmail.com",
-          "password": "$2a$10$uSavAHaE17ZPTLGtnXG1.epS.jMWVkKTqexjYnojGZodU5ZA884uS",
-          "name": "Trishna",
-          "id": 1
-        }
-      ],
-      "message": "Ki ra mangar bati ki khobor",
-      "timestamp": 1679873682300,
-      "id": 2
-    },
-    {
       "participants": "satya@gmail.com-trishna@gmail.com",
       "users": [
         {
@@ -78,47 +40,9 @@
           "id": 1
         }
       ],
-      "message": "hi",
-      "timestamp": 1679902076564,
-      "id": 3
-    },
-    {
-      "participants": "satya@gmail.com-khokon@gmail.com",
-      "users": [
-        {
-          "email": "satya@gmail.com",
-          "name": "Satya Ranjon",
-          "id": 2
-        },
-        {
-          "email": "khokon@gmail.com",
-          "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
-          "name": "Khakon Sharma",
-          "id": 3
-        }
-      ],
-      "message": "Hello bro",
-      "timestamp": 1679902105724,
-      "id": 4
-    },
-    {
-      "participants": "satya@gmail.com-badhon@gmail.com",
-      "users": [
-        {
-          "email": "satya@gmail.com",
-          "name": "Satya Ranjon",
-          "id": 2
-        },
-        {
-          "email": "badhon@gmail.com",
-          "password": "$2a$10$rnUKBmWVIK3EYtVRdXVzG.XVJnuX5FgimNSbJitcia0RZDniLJJoq",
-          "name": "Badhon Dev",
-          "id": 4
-        }
-      ],
-      "message": "Kathy viya",
-      "timestamp": 1679902139444,
-      "id": 5
+      "message": "ami kintu dhaka jabo",
+      "timestamp": 1679922392911,
+      "id": 1
     }
   ],
   "messages": [
@@ -130,68 +54,17 @@
         "id": 1
       },
       "receiver": {
-        "email": "khokon@gmail.com",
-        "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
-        "name": "Khakon Sharma",
-        "id": 3
-      },
-      "message": "Hi",
-      "timestamp": 1679873648954,
-      "id": 1
-    },
-    {
-      "conversationId": 2,
-      "sender": {
-        "email": "badhon@gmail.com",
-        "name": "Badhon Dev",
-        "id": 4
-      },
-      "receiver": {
-        "email": "trishna@gmail.com",
-        "password": "$2a$10$uSavAHaE17ZPTLGtnXG1.epS.jMWVkKTqexjYnojGZodU5ZA884uS",
-        "name": "Trishna",
-        "id": 1
-      },
-      "message": "Ki ra mangar bati ki khobor",
-      "timestamp": 1679873682300,
-      "id": 2
-    },
-    {
-      "conversationId": 3,
-      "sender": {
         "email": "satya@gmail.com",
+        "password": "$2a$10$78eAAPZgrCW8CUOfr1p/Eex152mL4wJHUlLVYzsi8JVIiRQeBTqSm",
         "name": "Satya Ranjon",
         "id": 2
       },
-      "receiver": {
-        "email": "trishna@gmail.com",
-        "password": "$2a$10$uSavAHaE17ZPTLGtnXG1.epS.jMWVkKTqexjYnojGZodU5ZA884uS",
-        "name": "Trishna",
-        "id": 1
-      },
-      "message": "Hi Baby?\n",
-      "timestamp": 1679873888081,
-      "id": 3
+      "message": "hello",
+      "timestamp": 1679922219344,
+      "id": 1
     },
     {
       "conversationId": 1,
-      "sender": {
-        "email": "trishna@gmail.com",
-        "name": "Trishna",
-        "id": 1
-      },
-      "receiver": {
-        "email": "khokon@gmail.com",
-        "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
-        "name": "Khakon Sharma",
-        "id": 3
-      },
-      "message": "Ki ba .jarua",
-      "timestamp": 1679874142936,
-      "id": 4
-    },
-    {
-      "conversationId": 3,
       "sender": {
         "email": "trishna@gmail.com",
         "name": "Trishna",
@@ -203,12 +76,63 @@
         "name": "Satya Ranjon",
         "id": 2
       },
-      "message": "I ba sala",
-      "timestamp": 1679874176559,
+      "message": "kothy tui",
+      "timestamp": 1679922302271,
+      "id": 2
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "receiver": {
+        "email": "satya@gmail.com",
+        "password": "$2a$10$78eAAPZgrCW8CUOfr1p/Eex152mL4wJHUlLVYzsi8JVIiRQeBTqSm",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "message": "tor ki problem",
+      "timestamp": 1679922320943,
+      "id": 3
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "receiver": {
+        "email": "satya@gmail.com",
+        "password": "$2a$10$78eAAPZgrCW8CUOfr1p/Eex152mL4wJHUlLVYzsi8JVIiRQeBTqSm",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "message": "ami dhaka jabo",
+      "timestamp": 1679922328707,
+      "id": 4
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "trishna@gmail.com",
+        "name": "Trishna",
+        "id": 1
+      },
+      "receiver": {
+        "email": "satya@gmail.com",
+        "password": "$2a$10$78eAAPZgrCW8CUOfr1p/Eex152mL4wJHUlLVYzsi8JVIiRQeBTqSm",
+        "name": "Satya Ranjon",
+        "id": 2
+      },
+      "message": "tui ki sunta pais na",
+      "timestamp": 1679922337594,
       "id": 5
     },
     {
-      "conversationId": 3,
+      "conversationId": 1,
       "sender": {
         "email": "satya@gmail.com",
         "name": "Satya Ranjon",
@@ -219,12 +143,12 @@
         "name": "Trishna",
         "id": 1
       },
-      "message": "hello",
-      "timestamp": 1679875343021,
+      "message": "tui amr ball ko sali",
+      "timestamp": 1679922382187,
       "id": 6
     },
     {
-      "conversationId": 3,
+      "conversationId": 1,
       "sender": {
         "email": "satya@gmail.com",
         "name": "Satya Ranjon",
@@ -235,12 +159,12 @@
         "name": "Trishna",
         "id": 1
       },
-      "message": "tomar ki khobor",
-      "timestamp": 1679875352759,
+      "message": "tor ki problem boll",
+      "timestamp": 1679922388066,
       "id": 7
     },
     {
-      "conversationId": 3,
+      "conversationId": 1,
       "sender": {
         "email": "satya@gmail.com",
         "name": "Satya Ranjon",
@@ -251,59 +175,9 @@
         "name": "Trishna",
         "id": 1
       },
-      "message": "tumi ki amr kotha mona koro na",
-      "timestamp": 1679875370836,
+      "message": "ami kintu dhaka jabo",
+      "timestamp": 1679922392911,
       "id": 8
-    },
-    {
-      "conversationId": 3,
-      "sender": {
-        "email": "satya@gmail.com",
-        "name": "Satya Ranjon",
-        "id": 2
-      },
-      "receiver": {
-        "email": "trishna@gmail.com",
-        "name": "Trishna",
-        "id": 1
-      },
-      "message": "hi",
-      "timestamp": 1679902076564,
-      "id": 9
-    },
-    {
-      "conversationId": 4,
-      "sender": {
-        "email": "satya@gmail.com",
-        "name": "Satya Ranjon",
-        "id": 2
-      },
-      "receiver": {
-        "email": "khokon@gmail.com",
-        "password": "$2a$10$7EtdJAXkFsmvXgreW9jAeue1PtVtOAj5t4a3rHMOyv5MMxn9jwt0m",
-        "name": "Khakon Sharma",
-        "id": 3
-      },
-      "message": "Hello bro",
-      "timestamp": 1679902105724,
-      "id": 10
-    },
-    {
-      "conversationId": 5,
-      "sender": {
-        "email": "satya@gmail.com",
-        "name": "Satya Ranjon",
-        "id": 2
-      },
-      "receiver": {
-        "email": "badhon@gmail.com",
-        "password": "$2a$10$rnUKBmWVIK3EYtVRdXVzG.XVJnuX5FgimNSbJitcia0RZDniLJJoq",
-        "name": "Badhon Dev",
-        "id": 4
-      },
-      "message": "Kathy viya",
-      "timestamp": 1679902139444,
-      "id": 11
     }
   ]
 }

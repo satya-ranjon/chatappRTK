@@ -21,26 +21,48 @@ const conversationsApi = apiSlice.injectEndpoints({
         method: "POST",
         body: data,
       }),
-      async onQueryStarted(arg, { queryFulfilled, dispatch }) {
-        const conversation = await queryFulfilled;
-        if (conversation?.data?.id) {
-          // silent entry to message table
-          const users = arg.data.users;
-          const senderUser = users.find((user) => user.email === arg.sender);
-          const receiverUser = users.find((user) => user.email !== arg.sender);
 
-          dispatch(
-            messagesApi.endpoints.addMessage.initiate({
-              conversationId: conversation?.data?.id,
-              sender: senderUser,
-              receiver: receiverUser,
-              message: arg.data.message,
-              timestamp: arg.data.timestamp,
-            })
-          );
+      async onQueryStarted(arg, { queryFulfilled, dispatch }) {
+        //! optimistic cash update and new conversation  add start
+        const CashUpdateNewConversationAdd = dispatch(
+          apiSlice.util.updateQueryData(
+            "getConversations",
+            arg.sender,
+            (draft) => {
+              draft.unshift(arg.data);
+            }
+          )
+        );
+
+        //! optimistic cash update and new conversation  add end
+
+        try {
+          const conversation = await queryFulfilled;
+          if (conversation?.data?.id) {
+            // silent entry to message table
+            const users = arg.data.users;
+            const senderUser = users.find((user) => user.email === arg.sender);
+            const receiverUser = users.find(
+              (user) => user.email !== arg.sender
+            );
+
+            dispatch(
+              messagesApi.endpoints.addMessage.initiate({
+                conversationId: conversation?.data?.id,
+                sender: senderUser,
+                receiver: receiverUser,
+                message: arg.data.message,
+                timestamp: arg.data.timestamp,
+              })
+            );
+          }
+        } catch (err) {
+          //! optimistic cash update and new conversation  add if field
+          CashUpdateNewConversationAdd.undo();
         }
       },
     }),
+
     editConversation: builder.mutation({
       query: ({ sender, id, data }) => ({
         url: `/conversations/${id}`,
@@ -48,22 +70,57 @@ const conversationsApi = apiSlice.injectEndpoints({
         body: data,
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
-        const conversation = await queryFulfilled;
-        if (conversation?.data?.id) {
-          // silent entry to message table
-          const users = arg.data.users;
-          const senderUser = users.find((user) => user.email === arg.sender);
-          const receiverUser = users.find((user) => user.email !== arg.sender);
+        //! optimistic cash update start
 
-          dispatch(
-            messagesApi.endpoints.addMessage.initiate({
-              conversationId: conversation?.data?.id,
-              sender: senderUser,
-              receiver: receiverUser,
-              message: arg.data.message,
-              timestamp: arg.data.timestamp,
-            })
-          );
+        const ConversationCashUpdate = dispatch(
+          apiSlice.util.updateQueryData(
+            "getConversations",
+            arg.sender,
+            (draft) => {
+              const draftConversation = draft.find((c) => c.id == arg.id);
+              draftConversation.message = arg.data.message;
+              draftConversation.timestamp = arg.data.timestamp;
+            }
+          )
+        );
+
+        //! optimistic cash update end
+
+        try {
+          const conversation = await queryFulfilled;
+          if (conversation?.data?.id) {
+            // silent entry to message table
+            const users = arg.data.users;
+            const senderUser = users.find((user) => user.email === arg.sender);
+            const receiverUser = users.find(
+              (user) => user.email !== arg.sender
+            );
+
+            const res = await dispatch(
+              messagesApi.endpoints.addMessage.initiate({
+                conversationId: conversation?.data?.id,
+                sender: senderUser,
+                receiver: receiverUser,
+                message: arg.data.message,
+                timestamp: arg.data.timestamp,
+              })
+            ).unwrap();
+
+            // update messages cache pessimistically start
+            dispatch(
+              apiSlice.util.updateQueryData(
+                "getMessages",
+                res.conversationId.toString(),
+                (draft) => {
+                  draft.push(res);
+                }
+              )
+            );
+            // update messages cache pessimistically end
+          }
+        } catch (err) {
+          //! optimistic conversation cash update field
+          ConversationCashUpdate.undo();
         }
       },
     }),
