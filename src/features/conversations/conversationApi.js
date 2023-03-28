@@ -10,6 +10,14 @@ const conversationsApi = apiSlice.injectEndpoints({
           import.meta.env.VITE_APP_CONVERSATIONS_PER_PAGE
         }`,
 
+      transformResponse(apiResponse, meta) {
+        const totalCount = meta.response.headers.get("X-Total-Count");
+        return {
+          data: apiResponse,
+          totalCount,
+        };
+      },
+
       async onCacheEntryAdded(
         arg,
         { updateCachedData, cacheDataLoaded, cacheEntryRemoved }
@@ -29,7 +37,9 @@ const conversationsApi = apiSlice.injectEndpoints({
           await cacheDataLoaded;
           socket.on("conversation", (data) => {
             updateCachedData((draft) => {
-              const conversation = draft.find((c) => c.id == data?.data?.id);
+              const conversation = draft.data.find(
+                (c) => c.id == data?.data?.id
+              );
               if (conversation?.id) {
                 conversation.message = data?.data?.message;
                 conversation.timestamp = data?.data?.timestamp;
@@ -42,6 +52,34 @@ const conversationsApi = apiSlice.injectEndpoints({
 
         await cacheEntryRemoved;
         socket.close();
+      },
+    }),
+
+    getMoreConversation: builder.query({
+      query: ({ email, page }) =>
+        `/conversations?participants_like=${email}&_sort=timestamp&_order=desc&_page=${page}&_limit=${
+          import.meta.env.VITE_APP_CONVERSATIONS_PER_PAGE
+        }`,
+      async onQueryStarted({ email }, { queryFulfilled, dispatch }) {
+        try {
+          const conversations = await queryFulfilled;
+          if (conversations.data?.length > 0) {
+            // update messages cache pessimistically start
+            dispatch(
+              apiSlice.util.updateQueryData(
+                "getConversations",
+                email,
+                (draft) => {
+                  return {
+                    data: [...draft.data, ...conversations.data],
+                    totalCount: Number(draft.totalCount),
+                  };
+                }
+              )
+            );
+            // update messages cache pessimistically end
+          }
+        } catch (err) {}
       },
     }),
 
@@ -64,7 +102,7 @@ const conversationsApi = apiSlice.injectEndpoints({
             "getConversations",
             arg.sender,
             (draft) => {
-              draft.unshift(arg.data);
+              draft.data.unshift(arg.data);
             }
           )
         );
@@ -112,7 +150,7 @@ const conversationsApi = apiSlice.injectEndpoints({
             "getConversations",
             arg.sender,
             (draft) => {
-              const draftConversation = draft.find((c) => c.id == arg.id);
+              const draftConversation = draft.data.find((c) => c.id == arg.id);
               draftConversation.message = arg.data.message;
               draftConversation.timestamp = arg.data.timestamp;
             }
