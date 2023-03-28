@@ -18,8 +18,6 @@ const ConversationList = () => {
     useGetConversationsQuery(email);
 
   let { data: conversations, totalCount } = data || {};
-  console.log(page);
-  console.log(hasMore);
 
   // fetch more data
   const fetchMore = () => {
